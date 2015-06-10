@@ -3,9 +3,6 @@ if ! [ $(id -u) = 0 ]; then
    echo "You must be root to do this." 1>&2
    exit 100
 else
-   echo "Update .."
-   apt-get update >/dev/null
-   apt-get install libcurl4-openssl-dev git
    cd /opt
 	git clone https://github.com/tvheadend/tvheadend.git
 	cd tvheadend
