@@ -58,7 +58,8 @@ exit 0
 EOF
 	chmod 755 /etc/init.d/tvheadend
 	update-rc.d tvheadend defaults
-	echo "Starting TVHS service"
-	/etc/init.d/tvheadend start
+	echo "Starting TVHS without creditials"
+	echo "Navigate to http://<rasppi_ip>:9981"
+	/usr/local/bin/tvheadend --noacl
 fi
 exit 0
